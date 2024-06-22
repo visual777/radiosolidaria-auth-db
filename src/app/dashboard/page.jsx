@@ -1,6 +1,7 @@
 import { getServerSession } from "next-auth";
 import { options } from "@/app/api/auth/[...nextauth]/options";
 import { redirect } from "next/navigation";
+import DashboardMain from "@/components/dashboard/DashboardMain";
 
 const dashboard = async () => {
     const session = await getServerSession(options);
@@ -10,7 +11,9 @@ const dashboard = async () => {
     }
 
   return (
-    <div><h1>Dashboard only admins</h1></div>
+    <section>
+      <DashboardMain />
+    </section>
   )
 }
 
