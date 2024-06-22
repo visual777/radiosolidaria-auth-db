@@ -1,19 +1,11 @@
 "use client";
 
-import { useEffect } from "react";
-import { useDispatch } from "react-redux";
-import { useVideos } from "@/app/hooks/useVideos";
-import { getVideosRadio } from "@/redux/video/operations";
+import { useState } from "react";
 import Link from "next/link";
 import css from "./LastVideos.module.css";
 
 const LastVideos = () => {
-  const dispatch = useDispatch();
-  const { videosRadio, isLoading } = useVideos();
-
-  useEffect(() => {
-    dispatch(getVideosRadio());
-  }, []);
+  const [videosRadio, setVideosRadio] = useState([]);
 
   return (
     <div className={css.videosContainer}>

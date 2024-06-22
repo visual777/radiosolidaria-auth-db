@@ -1,16 +1,12 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { useDispatch } from "react-redux";
-import { getVideosYoutube } from "@/redux/video/operations";
-import { useVideos } from "@/app/hooks/useVideos";
 import Link from "next/link";
 import css from "./SolidariaTV.module.css";
 
 const SolidariaTV = ({ canalVideo }) => {
-  const dispatch = useDispatch();
   const [videosURL, setVideoURL] = useState(null);
-  const { videosYoutube } = useVideos();
+  const [videosYoutube, setVideosYoutube] = useState([]);
 
   useEffect(() => {
     if (canalVideo === "Solidaria TV") {
@@ -25,14 +21,6 @@ const SolidariaTV = ({ canalVideo }) => {
       setVideoURL(null);
     }
   }, [canalVideo]);
-
-  useEffect(() => {
-    if (videosURL === null) {
-      return;
-    } else {
-      dispatch(getVideosYoutube(videosURL));
-    }
-  }, [videosURL]);
 
   return (
     <div className={css.videosContainer}>
