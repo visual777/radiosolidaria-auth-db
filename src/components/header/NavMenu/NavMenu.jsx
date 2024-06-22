@@ -24,8 +24,20 @@ const NavMenu = () => {
           </li>
         ))}
         {session && (
-            <Link href={"/api/auth/signout?callbackUrl=/"}>Logout</Link>
-          )}
+          <>
+            <li>
+              <Link href={"/dashboard"} className={css.dashboardLink}>Tablero</Link>
+            </li>
+            <li>
+              <Link
+                href={"/api/auth/signout?callbackUrl=/"}
+                className={css.logoutBtn}
+              >
+                Logout
+              </Link>
+            </li>
+          </>
+        )}
       </ul>
     </div>
   );
