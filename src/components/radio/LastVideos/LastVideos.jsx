@@ -1,11 +1,17 @@
 "use client";
 
-import { useState } from "react";
+import React, { useEffect, useState } from 'react';
 import Link from "next/link";
 import css from "./LastVideos.module.css";
 
 const LastVideos = () => {
   const [videosRadio, setVideosRadio] = useState([]);
+
+  useEffect(() => {
+    fetch('/api/videos')
+      .then(response => response.json())
+      .then(data => setVideosRadio(data.data));
+  }, []);
 
   return (
     <div className={css.videosContainer}>
