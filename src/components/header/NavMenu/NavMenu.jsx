@@ -26,7 +26,7 @@ const NavMenu = () => {
         {session && (
           <>
             <li>
-              <Link href={"/dashboard"} className={css.dashboardLink}>Tablero</Link>
+              <Link href={"/dashboard"} className={pathname === '/dashboard' ? css.activeDashboard : css.dashboardLink}>Tablero</Link>
             </li>
             <li>
               <Link

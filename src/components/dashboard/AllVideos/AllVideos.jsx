@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import VideoItem from "./VideoItem/VideoItem";
+import css from "./AllVideos.module.css";
 
 const AllVideos = () => {
   const [videos, setVideos] = useState([]);
@@ -13,7 +14,7 @@ const AllVideos = () => {
   }, []);
 
   return (
-    <ul>
+    <ul className={css.list}>
       {videos.map((video) => (
         <VideoItem key={video._id} video={video} />
       ))}
