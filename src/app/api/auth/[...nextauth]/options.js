@@ -36,7 +36,7 @@ export const options = {
               if (foundUser.email === "frederiko@gmail.com") {
                 foundUser["role"] = "admin";
               }
-              return foundUser;
+              return { user: foundUser, redirect: '/dashboard' };
             }
           }
         } catch (error) {
