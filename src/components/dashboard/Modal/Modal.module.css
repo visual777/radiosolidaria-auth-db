@@ -1,0 +1,39 @@
+.backdrop {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55));
+}
+
+.containerForm {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--dark-blue);
+  padding: 15px;
+  border-radius: 12px;
+  min-width: 30%;
+}
+
+.closeBtn {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.iconClose {
+  width: 32px;
+  height: 32px;
+  fill: var(--white-color);
+  transition: var(--hover-effect);
+}
+
+.closeBtn:hover .iconClose {
+  fill: var(--accent-color);
+}
