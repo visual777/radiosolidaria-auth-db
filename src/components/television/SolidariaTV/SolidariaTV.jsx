@@ -22,6 +22,13 @@ const SolidariaTV = ({ canalVideo }) => {
     }
   }, [canalVideo]);
 
+  useEffect(() => {
+    if(!videosURL) return;
+    fetch(`/api/videos?category=${videosURL}`)
+      .then(response => response.json())
+      .then(data => setVideosYoutube(data.data));
+  }, [videosURL]);
+
   return (
     <div className={css.videosContainer}>
       {videosURL && videosYoutube?.map((video) => (

@@ -8,7 +8,7 @@ const LastVideos = () => {
   const [videosRadio, setVideosRadio] = useState([]);
 
   useEffect(() => {
-    fetch('/api/videos')
+    fetch(`/api/videos?category=radio`)
       .then(response => response.json())
       .then(data => setVideosRadio(data.data));
   }, []);
