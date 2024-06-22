@@ -1,0 +1,29 @@
+.list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 16px;
+    animation: appearDown 1.4s ease;
+}
+
+@media screen and (min-width: 768px){
+    .list {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        column-gap: 16px;
+    }
+}
+
+@keyframes appearDown {
+    0% {
+        opacity: 0;
+        transform: translateY(200px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+}

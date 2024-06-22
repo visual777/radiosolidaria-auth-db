@@ -1,0 +1,41 @@
+.container {
+  width: 100%;
+  max-width: 375px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.title {
+  font-size: 20px;
+  text-align: center;
+  margin: 20px 0;
+  animation: appearLeft 1.4s ease;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+@keyframes appearLeft {
+  0% {
+      opacity: 0;
+      transform: translateX(200px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateX(0);
+  }
+  
+}

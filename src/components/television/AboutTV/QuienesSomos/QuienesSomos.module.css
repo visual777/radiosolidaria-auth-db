@@ -1,0 +1,63 @@
+.container {
+    width: 100%;
+    padding: 0 15px;
+}
+
+.container h3 {
+    text-align: center;
+    animation: appearLeft 1s ease;
+}
+
+.container p {
+    text-align: justify;
+    margin-top: 8px;
+    animation: appearDown 1s ease;
+}
+
+.image {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+    animation: appearDown 1.4s ease;
+}
+
+@media screen and (min-width: 768px) {
+    .container h3 {
+       font-size: 24px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+  .content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    column-gap: 20px;
+  }
+    
+  .image {
+    max-width: 50%;
+  }
+}
+
+@keyframes appearLeft {
+  0% {
+      opacity: 0;
+      transform: translateX(-200px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes appearDown {
+  0% {
+      opacity: 0;
+      transform: translateY(200px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}

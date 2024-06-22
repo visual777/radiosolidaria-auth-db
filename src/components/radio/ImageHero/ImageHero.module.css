@@ -1,0 +1,26 @@
+.imageBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 20px;
+  padding: 10px 0;
+  background-color: var(--accent-color);
+  animation: appear 1.2s ease;
+}
+
+.imageBox img {
+  object-fit: contain;
+  height: auto;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

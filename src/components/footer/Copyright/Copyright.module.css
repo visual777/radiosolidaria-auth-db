@@ -1,0 +1,48 @@
+.text {
+  color: var(--copy-color);
+  font-size: 14px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.linksBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 10px;
+}
+
+.linksBox a {
+    font-size: 14px;
+    color: var(--copy-color);
+    text-decoration: underline;
+    transition: var(--hover-effect);
+}
+
+.linksBox a:hover {
+    color: var(--accent-color);
+}
+
+@media screen and (min-width: 768px) {
+  .text {
+    font-size: 16px;
+  }
+
+  .linksBox a {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    justify-content: center;
+    padding-top: 20px;
+  }
+
+  .text {
+    margin-top: 0;
+  }
+}

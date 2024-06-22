@@ -1,0 +1,30 @@
+.container {
+  padding: 0 15px;
+  width: 100%;
+}
+
+.titleMain {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 1em;
+  margin-bottom: 12px;
+}
+
+.titleBox {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+  margin-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--copy-color);
+}
+
+.title span,
+.link {
+  color: var(--accent-color);
+}

@@ -1,0 +1,37 @@
+@media screen and (max-width: 1199.98px) {
+  .imageBox {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .imageBox {
+    display: block;
+    width: 350px;
+    height: 160px;
+    overflow: hidden;
+    margin-top: 20px;
+    border: 2px solid var(--radio-red);
+    border-radius: 75px;
+    background: #e0e0e0;
+    box-shadow: inset 14px 14px 26px #bebebe, inset -14px -14px 26px #ffffff;
+    animation: appearRight 1.8s ease;
+  }
+
+  .imageBox img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+@keyframes appearRight {
+  0% {
+      opacity: 0;
+      transform: translateX(200px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}

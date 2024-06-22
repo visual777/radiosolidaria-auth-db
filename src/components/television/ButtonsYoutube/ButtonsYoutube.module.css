@@ -1,0 +1,136 @@
+.listLinks {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.linkBtn {
+  width: 132px;
+  height: 100px;
+  display: inline-block;
+  font-size: 12px;
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  padding: 0;
+}
+
+.imageWrapper {
+  position: relative;
+  display: inline-block;
+  animation: appearDown 1.4s ease;
+}
+
+.imageWrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  transition: var(--hover-effect);
+}
+
+.imageCard {
+  object-fit: cover;
+}
+
+.cardContainerActive,
+.cardContainer {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  max-height: 100px;
+}
+
+.cardContainerActive {
+  border: 2px solid var(--accent-color);
+  -webkit-box-shadow: 0px 2px 8px 0px rgb(19, 109, 121);
+  -moz-box-shadow: 0px 2px 8px 0px rgb(14, 95, 109);
+  box-shadow: 0px 2px 8px 0px rgb(50, 124, 143);
+}
+
+.cardContainerActive .imageWrapper::after {
+  background-color: transparent;
+}
+
+.cardContainerActive .cardTitle {
+  opacity: 0;
+}
+
+.cardContainer:hover .imageWrapper::after {
+  background-color: transparent;
+}
+
+.cardContainer:hover .cardTitle {
+  opacity: 0;
+}
+
+.cardTitle {
+  opacity: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  font-size: 12px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  z-index: 100;
+  transition: var(--hover-effect);
+}
+
+@media screen and (min-width: 375px) {
+  .linkBtn {
+    width: 160px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .linkBtn {
+    width: 350px;
+    height: 200px;
+    font-size: 14px;
+  }
+
+  .cardContainerActive,
+  .cardContainer {
+    max-height: 200px;
+  }
+
+  .listLinks {
+    gap: 20px;
+  }
+
+  .cardTitle {
+    font-size: 24px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .linkBtn {
+    width: 250px;
+    height: 150px;
+  }
+
+  .cardContainerActive,
+  .cardContainer {
+    max-height: 150px;
+  }
+}
+
+@keyframes appearDown {
+  0% {
+      opacity: 0;
+      transform: translateY(200px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateX(0);
+  }
+  
+}

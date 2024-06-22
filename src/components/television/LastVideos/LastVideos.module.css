@@ -1,0 +1,29 @@
+.container {
+    text-align: center;
+}
+
+.title {
+    letter-spacing: 0.02em;
+    margin-bottom: 8px;
+    margin-top: 20px;
+    animation: appearRight 1.4s ease;
+  }
+
+  @media screen and (min-width: 768px){
+    .title {
+      font-size: 28px;
+      margin: 40px 0;
+    }
+  }
+
+  @keyframes appearRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    
+}

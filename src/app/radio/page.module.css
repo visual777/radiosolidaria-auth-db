@@ -1,0 +1,33 @@
+.heroContainer {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.container {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .heroContainer {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    max-width: 768px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contentContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .heroContainer {
+    max-width: 1200px;
+  }
+}

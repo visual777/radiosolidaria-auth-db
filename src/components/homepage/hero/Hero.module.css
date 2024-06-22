@@ -1,0 +1,99 @@
+.heroContainer {
+  max-width: 375px;
+}
+
+.hero {
+  position: relative;
+  background-color: transparent;
+  padding: 20px;
+}
+
+.hero h1 {
+  color: var(--white-color);
+  text-align: center;
+  font-size: 22px;
+  font-weight: 600;
+  animation: appearUp 1s ease;
+}
+
+.hero p {
+  text-align: center;
+  margin-top: 8px;
+  animation: appearUp 1.8s ease;
+}
+
+@media screen and (min-width: 768px) {
+  .heroContainer {
+    max-width: 768px;
+  }
+
+  .hero h1 {
+    font-size: 54px;
+  }
+
+  .hero p {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 1199.98px) {
+  .imageRadio,
+  .imageTV {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .heroContainer {
+    position: relative;
+    margin: 20px auto 20px 0;
+  }
+
+  .hero {
+    padding: 120px 20px;
+  }
+
+  .hero h1 {
+    font-size: 72px;
+  }
+
+  .imageTV,
+  .imageRadio {
+    position: absolute;
+  }
+
+  .imageTV {
+    top: -14px;
+    right: -223px;
+    animation: appearRight 1s ease;
+  }
+
+  .imageRadio {
+    bottom: 0;
+    right: -403px;
+    z-index: 8;
+    animation: appearRight 1.8s ease;
+  }
+}
+
+@keyframes appearUp {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes appearRight {
+  0% {
+    opacity: 0;
+    transform: translateX(300px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

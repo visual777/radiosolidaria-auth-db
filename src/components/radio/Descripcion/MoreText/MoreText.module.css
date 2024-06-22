@@ -1,0 +1,30 @@
+.text {
+  margin-top: 12px;
+  text-align: justify;
+  cursor: pointer;
+}
+
+.text:first-of-type {
+  animation: appearDown 1s ease;
+}
+
+.text:last-of-type {
+  animation: appearDown 1.6s ease;
+}
+
+@media screen and (min-width: 768px) {
+  .text {
+    font-size: 18px;
+  }
+}
+
+@keyframes appearDown {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

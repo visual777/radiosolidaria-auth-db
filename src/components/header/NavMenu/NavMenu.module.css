@@ -1,0 +1,40 @@
+/* NavMenu.module.css */
+.listMenu {
+    display: flex;
+    align-items: center;
+    column-gap: 24px;
+}
+
+.listItem {
+    color: var(--accent-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.activeItem {
+    color: var(--white-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.activeItem a {
+    background-color: var(--accent-color);
+}
+
+.listItem::after {
+    width: 0;
+}
+
+.activeItem::after {
+    width: 100%;
+}
+
+@media screen and (min-width: 1200px) {
+    .listMenu {
+        column-gap: 44px;
+    }
+}
