@@ -1,0 +1,17 @@
+.buttonsContainer {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    gap: 10px;
+}
+
+.buttonsContainer button {
+    height: 40px;
+    background-color: transparent;
+    border-radius: 12px;
+    outline: none;
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
+}
