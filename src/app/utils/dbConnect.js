@@ -7,7 +7,12 @@ async function dbConnect() {
     return;
   }
 
-  const db = await mongoose.connect(process.env.MONGODB_URI);
+  const db = await mongoose.connect(process.env.MONGODB_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useFindAndModify: false,
+    useCreateIndex: true,
+  });
 
   connection.isConnected = db.connections[0].readyState;
 }

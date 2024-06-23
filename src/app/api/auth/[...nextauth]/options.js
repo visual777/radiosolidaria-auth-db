@@ -46,7 +46,7 @@ export const options = {
       },
     }),
   ],
-  secret: process.env.SECRET,
+  secret: process.env.NEXTAUTH_SECRET,
   callbacks: {
     async jwt({ token, user }) {
       if (user) token.role = user.role;
