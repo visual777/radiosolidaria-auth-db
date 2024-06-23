@@ -29,7 +29,7 @@ const DashboardMain = () => {
     <div>
       <h1 className={css.title}>Administrador de Solidaria Media</h1>
       <AddNew setShowModal={setShowModal}/>
-      <ButtonsCategory setCategoryChoosen={setCategoryChoosen}/>
+      <ButtonsCategory setCategoryChoosen={setCategoryChoosen} categoryChoosen={categoryChoosen}/>
       <AllVideos videos={videos} refreshVideos={refreshVideos}/>
       {showModal && <AddVideoForm setShowModal={setShowModal} refreshVideos={refreshVideos}/>}
     </div>

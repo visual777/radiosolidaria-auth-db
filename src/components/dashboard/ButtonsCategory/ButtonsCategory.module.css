@@ -1,17 +1,28 @@
 .buttonsContainer {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
-    gap: 10px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  gap: 10px;
 }
 
-.buttonsContainer button {
-    height: 40px;
-    background-color: transparent;
-    border-radius: 12px;
-    outline: none;
-    border: 1px solid var(--accent-color);
-    color: var(--accent-color);
+.button {
+  height: 40px;
+  background-color: transparent;
+  border-radius: 12px;
+  outline: none;
+  border: 1px solid var(--accent-color);
+  color: var(--accent-color);
+  transition: var(--hover-effect);
+}
+
+.active {
+  height: 40px;
+  border-radius: 12px;
+  outline: none;
+  transition: var(--hover-effect);
+  background-color: var(--white-color);
+  color: var(--dark-blue);
+  border: 1px solid var(--dark-blue);
 }
