@@ -1,0 +1,35 @@
+.containerImage {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100dvw;
+  height: 100dvh;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.image {
+  margin: 20% auto 0 auto;
+}
+
+.progressBar {
+  width: 90%;
+  background-color: var(--dark-blue);
+  border-radius: 5px;
+  margin: 40px auto 0 auto;
+  -webkit-box-shadow: -1px 0px 39px 7px rgba(33, 143, 163, 1);
+  -moz-box-shadow: -1px 0px 39px 7px rgba(33, 143, 163, 1);
+  box-shadow: -1px 0px 39px 7px rgba(33, 143, 163, 1);
+}
+
+.progress {
+  height: 20px;
+  background-color: var(--accent-color);
+  border-radius: 5px;
+}
+
+@media screen and (min-width: 768px) {
+  .image {
+    margin: 20% auto 0 auto;
+  }
+}
