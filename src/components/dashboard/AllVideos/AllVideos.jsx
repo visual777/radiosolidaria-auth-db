@@ -1,21 +1,9 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import VideoItem from "./VideoItem/VideoItem";
 import css from "./AllVideos.module.css";
 
-const AllVideos = () => {
-  const [videos, setVideos] = useState([]);
-
-  useEffect(() => {
-    fetch('/api/allVideos', {
-      headers: {
-        'Cache-Control': 'no-cache'
-      }
-    })
-      .then(response => response.json())
-      .then(data => setVideos(data.data));
-  }, []);
+const AllVideos = ({videos}) => {
 
   return (
     <ul className={css.list}>

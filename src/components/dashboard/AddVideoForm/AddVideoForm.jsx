@@ -31,7 +31,7 @@ const AddVideoForm = ({ setShowModal }) => {
       }
     } catch (error) {
       console.error(error);
-    }
+    } 
   };
 
   useEffect(() => {
