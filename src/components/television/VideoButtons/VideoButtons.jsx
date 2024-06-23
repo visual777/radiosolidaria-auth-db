@@ -1,12 +1,14 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { useMediaQuery } from "react-responsive";
 import Icon from "@/components/Icon/Icon";
 import Hls from "hls.js";
 import css from "./VideoButtons.module.css";
 import Image from "next/image";
 
 const VideoButtons = () => {
+  const isTabletEnd = useMediaQuery({maxWidth: 1199.98});
   const videoRef = useRef(null);
   const SpainTV =
     "https://canadaremar2.todostreaming.es/live/solidariatv-webhd.m3u8";
@@ -58,11 +60,11 @@ const VideoButtons = () => {
           className={urlTv === SpainTV ? css.activeButton : css.button}
           onClick={handleSpainTV}
         >
-          España&nbsp;&nbsp;
-          <Icon
-            name={urlTv !== "" && urlTv !== ArgentinaTV ? "icon-stop" : "icon-play"}
+          España&nbsp;
+            {urlTv !== "" && urlTv !== ArgentinaTV && isTabletEnd ? 'TV' : (<Icon
+            name={urlTv !== "" && urlTv !== ArgentinaTV  ? "icon-stop" : "icon-play"}
             className={css.playIcon}
-          />
+          />)}
         </button>
         <button
           type="button"
@@ -71,10 +73,10 @@ const VideoButtons = () => {
           onClick={handleArgentinaTV}
         >
           Argentina{" "}
-          <Icon
+          {urlTv !== "" && urlTv !== SpainTV && isTabletEnd ? 'TV' : (<Icon
             name={urlTv !== "" && urlTv !== SpainTV  ? "icon-stop" : "icon-play"}
             className={css.playIcon}
-          />
+          />)}
         </button>
       </div>
       <div className={css.videoContainer}>
