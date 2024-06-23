@@ -37,6 +37,31 @@
     border: 1px solid var(--accent-color);
 }
 
+.link {
+    position: relative;
+    transition: all 400ms ease;
+    max-width: 32px;
+    max-height: 32px;
+  }
+  
+  .icon {
+    width: 32px;
+    height: 32px;
+    fill: var(--accent-color);
+  }
+  
+  @media screen and (min-width: 768px) {
+    .link {
+      max-width: 42px;
+      max-height: 42px;
+    }
+  
+    .icon {
+      width: 42px;
+      height: 42px;
+    }
+  }
+
 @keyframes appearRight {
     0% {
         transform: translateX(100px);

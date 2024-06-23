@@ -23,22 +23,18 @@ const NavMenu = () => {
             <LinkHeader link={link} />
           </li>
         ))}
-        {session && (
-          <>
-            <li>
+      </ul>
+      {session && (
+          <div className={css.adminBtns}>
               <Link href={"/dashboard"} className={pathname === '/dashboard' ? css.activeDashboard : css.dashboardLink}>Tablero</Link>
-            </li>
-            <li>
               <Link
                 href={"/api/auth/signout?callbackUrl=/"}
                 className={css.logoutBtn}
               >
                 Logout
               </Link>
-            </li>
-          </>
+          </div>
         )}
-      </ul>
     </div>
   );
 };
