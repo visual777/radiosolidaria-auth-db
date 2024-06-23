@@ -8,7 +8,11 @@ const AllVideos = () => {
   const [videos, setVideos] = useState([]);
 
   useEffect(() => {
-    fetch('/api/allVideos')
+    fetch('/api/allVideos', {
+      headers: {
+        'Cache-Control': 'no-cache'
+      }
+    })
       .then(response => response.json())
       .then(data => setVideos(data.data));
   }, []);
