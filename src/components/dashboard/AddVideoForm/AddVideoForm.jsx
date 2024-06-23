@@ -8,7 +8,7 @@ import CategorySelect from "../CategorySelect/CategorySelect";
 import Modal from "../Modal/Modal";
 import css from "./AddVideoForm.module.css";
 
-const AddVideoForm = ({ setShowModal }) => {
+const AddVideoForm = ({ setShowModal, refreshVideos }) => {
   const [category, setCategory] = useState(null);
   const {
     register,
@@ -28,6 +28,7 @@ const AddVideoForm = ({ setShowModal }) => {
       });
       if (response.ok) {
         setShowModal(false);
+        refreshVideos();
       }
     } catch (error) {
       console.error(error);

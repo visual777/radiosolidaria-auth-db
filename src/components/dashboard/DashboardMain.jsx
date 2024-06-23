@@ -14,18 +14,24 @@ const DashboardMain = () => {
 
   useEffect(() => {
     if(!categoryChoosen) return;
-    fetch(`/api/videos?category=${categoryChoosen}`)
+    fetch(`/api/dashboard?category=${categoryChoosen}`)
       .then(response => response.json())
       .then(data => setVideos(data.data));
   }, [categoryChoosen]);
+
+  const refreshVideos = () => {
+    fetch(`/api/dashboard?category=${categoryChoosen}`)
+      .then(response => response.json())
+      .then(data => setVideos(data.data));
+  };
 
   return (
     <div>
       <h1 className={css.title}>Administrador de Solidaria Media</h1>
       <AddNew setShowModal={setShowModal}/>
       <ButtonsCategory setCategoryChoosen={setCategoryChoosen}/>
-      <AllVideos videos={videos}/>
-      {showModal && <AddVideoForm setShowModal={setShowModal} />}
+      <AllVideos videos={videos} refreshVideos={refreshVideos}/>
+      {showModal && <AddVideoForm setShowModal={setShowModal} refreshVideos={refreshVideos}/>}
     </div>
   );
 };

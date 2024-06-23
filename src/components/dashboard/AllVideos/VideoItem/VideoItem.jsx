@@ -2,7 +2,7 @@ import React from "react";
 import Icon from "@/components/Icon/Icon";
 import css from "./VideoItem.module.css";
 
-const VideoItem = ({ video }) => {
+const VideoItem = ({ video, refreshVideos }) => {
   const { _id } = video;
 
  const handleDelete = async () => {
@@ -12,6 +12,7 @@ const VideoItem = ({ video }) => {
       });
       if (res.ok) {
         console.log("Video deleted successfully");
+        refreshVideos();
       } else {
         console.log("An error occurred while deleting the video");
       }
