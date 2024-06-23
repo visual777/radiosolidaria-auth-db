@@ -2,6 +2,8 @@ import CredentialsProvider from "next-auth/providers/credentials";
 import bcrypt from "bcrypt";
 import User from "@/app/models/User";
 
+const emailAdmin = process.env.EMAIL_ADMIN;
+
 export const options = {
   providers: [
     CredentialsProvider({
@@ -33,7 +35,7 @@ export const options = {
               console.log("Password match");
               delete foundUser.password;
 
-              if (foundUser.email === "frederiko@gmail.com") {
+              if (foundUser.email === emailAdmin) {
                 foundUser["role"] = "admin";
               }
               return { user: foundUser, redirect: '/dashboard' };
