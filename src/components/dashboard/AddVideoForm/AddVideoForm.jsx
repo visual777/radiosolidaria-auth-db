@@ -16,7 +16,28 @@ const AddVideoForm = ({ setShowModal }) => {
     handleSubmit,
     formState: { errors },
   } = useForm({ resolver: yupResolver(addVideoSchema) });
-  const onSubmit = (data) => console.log(data);
+ 
+  const onSubmit = async (data) => {
+    const { title, url, category } = data;
+    const video = { title, url, category };
+    console.log(video);
+    try {
+      const response = await fetch("/api/add", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(video),
+      });
+      const result = await response.json();
+      console.log(result);
+      if (response.ok) {
+        setShowModal(false);
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   useEffect(() => {
     setValue("category", category);
