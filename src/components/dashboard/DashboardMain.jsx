@@ -17,7 +17,7 @@ const DashboardMain = () => {
       }
     })
       .then(response => response.json())
-      .then(dataVideo => setVideos(dataVideo.data));
+      .then(dataVideo => setVideos(dataVideo.data)).catch(err => console.log(err));
   }, []);
 
   return (
