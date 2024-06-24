@@ -1,7 +1,7 @@
 .videosContainer {
   position: relative;
   text-align: center;
-  width: 100%;
+  width: 90%;
   max-width: 375px;
   margin: 0 auto;
 }
@@ -38,8 +38,21 @@
   min-height: 1035px
 }
 
+.loaderContainer {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 768px;
+  height: 661px;
+}
+
 @media screen and (min-width: 768px) {
   .videosContainer {
+    width: 100%;
     max-width: 768px;
     margin: 20px auto;
   }

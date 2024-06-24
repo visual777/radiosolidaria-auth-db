@@ -12,6 +12,7 @@
   -webkit-box-shadow: 2px 4px 12px 0px rgba(33, 159, 163, 1);
   -moz-box-shadow: 2px 4px 12px 0px rgba(33, 159, 163, 1);
   box-shadow: 2px 4px 12px 0px rgba(33, 159, 163, 1);
+  animation: appearDown 1s ease;
 }
 
 .title {
@@ -76,5 +77,16 @@
 
   .category {
     font-size: 18px;
+  }
+}
+
+@keyframes appearDown {
+  0% {
+      opacity: 0;
+      transform: translateY(100px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
   }
 }

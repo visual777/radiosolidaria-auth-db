@@ -10,13 +10,8 @@ const LoaderVideos = () => {
         radius="48"
         color="var(--white-color)"
         ariaLabel="watch-loading"
-        wrapperStyle={{
-          position: "absolute",
-          top: "50%",
-          left: "50%",
-          transform: "translate(-50%, -50%)",
-        }}
-        wrapperClass=""
+        wrapperStyle={{}}
+        wrapperClass=''
       />
     </>
   );

@@ -1,68 +1,89 @@
 .videosContainer {
-    margin-top: 12px;
-    text-align: center;
-    max-width: 375px;
+  position: relative;
+  margin-top: 12px;
+  text-align: center;
+  max-width: 375px;
+  width: 90%;
+  min-height: 1000px;
+  margin: 40px auto;
+}
+
+.link {
+  display: inline-block;
+  background-color: var(--accent-color);
+  padding: 6px 12px;
+  margin-top: 12px;
+  border-radius: 20px;
+  color: var(--white-color);
+  font-weight: 600;
+  transition: var(--hover-effect);
+}
+
+.link:hover {
+  background-color: var(--white-color);
+  color: var(--accent-color);
+}
+
+.videoContainer {
+  border-radius: 20px;
+}
+
+.loaderContainer {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 768px;
+  height: 661px;
+}
+
+@media screen and (min-width: 768px) {
+  .videoContainer {
+    width: 350px;
+  }
+
+  .videosContainer {
     width: 100%;
-    margin: 40px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 40px;
+    max-width: 768px;
+    min-height: 600px;
   }
 
   .link {
-    display: inline-block;
-    background-color: var(--accent-color);
-    padding: 6px 12px;
-    margin-top: 12px;
-    border-radius: 20px;
-    color: var(--white-color);
-    font-weight: 600;
-    transition: var(--hover-effect);
-  }
-  
-  .link:hover {
+    margin-top: 0;
     background-color: var(--white-color);
     color: var(--accent-color);
+    width: 338px;
+    height: 198px;
+    border: 1px solid var(--accent-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    transition: var(--hover-effect);
   }
 
-  .videoContainer {
-    border-radius: 20px;
+  .link:hover {
+    background-color: var(--accent-color);
+    color: var(--white-color);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .videosContainer {
+    max-width: 1200px;
+    min-height: 434px;
   }
 
-  @media screen and (min-width: 768px){
-    .videoContainer {
-      width: 350px;
-    }
-
-    .videosContainer {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 20px;
-      margin-top: 40px;
-      max-width: 768px;
-    }
-
-    .link {
-      margin-top: 0;
-      background-color: var(--white-color);
-      color: var(--accent-color);
-      width: 338px;
-      height: 198px;
-      border: 1px solid var(--accent-color);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 24px;
-      transition: var(--hover-effect);
-    }
-  
-    .link:hover {
-      background-color: var(--accent-color);
-      color: var(--white-color);
-    }
+  .loaderContainer {
+    top: 50%;
   }
-
-  @media screen and (min-width: 1200px) {
-    .videosContainer {
-      max-width: 1200px;
-    }
-  }
+}
