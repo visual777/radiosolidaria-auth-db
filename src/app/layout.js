@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import { ToastContainer } from "react-toastify";
 import Header from "@/components/header/Header";
 import AuthProvider from "@/components/AuthProvider";
@@ -36,6 +37,7 @@ export default function RootLayout({ children }) {
                 {children}
                 <GoogleAnalytics gaId="G-S8PFRPB6DC" />
                 <Analytics />
+                <SpeedInsights />
                 <ToastContainer
                   position="top-right"
                   autoClose={5000}
