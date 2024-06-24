@@ -13,7 +13,7 @@ const FirstScreen = () => {
         if (oldProgress === 100) {
           clearInterval(timer);
         }
-        const diff = 100 / (5 * 10); // 5 seconds, 10 for 100ms interval
+        const diff = 100 / (3 * 9); 
         return Math.min(oldProgress + diff, 100);
       });
     }, 100);

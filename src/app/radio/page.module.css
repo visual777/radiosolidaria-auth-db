@@ -14,7 +14,7 @@
     align-items: center;
     justify-content: center;
     max-width: 768px;
-    margin: 0 auto;
+    margin: 0 auto 40px auto;
   }
 }
 
@@ -29,5 +29,6 @@
 
   .heroContainer {
     max-width: 1200px;
+    margin: 0 auto 60px auto;
   }
 }

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import { Analytics } from "@vercel/analytics/react"
 import { ToastContainer } from 'react-toastify';
 import Header from "@/components/header/Header";
 import AuthProvider from "@/components/AuthProvider";
@@ -16,7 +17,7 @@ export default function RootLayout({ children }) {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 5000);
+    }, 3000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -34,6 +35,7 @@ export default function RootLayout({ children }) {
               <main>
                 {children}
                 <GoogleAnalytics gaId="G-S8PFRPB6DC" />
+                <Analytics />
                 <ToastContainer />
               </main>
               <Footer />

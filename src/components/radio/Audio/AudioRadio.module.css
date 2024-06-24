@@ -1,9 +1,13 @@
 .label {
-  font-size: 24px;
+  font-size: 26px;
   font-weight: 600;
   color: var(--radio-red);
   width: 100%;
   max-width: 270px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
 }
 
 .containerPlayer {
@@ -11,15 +15,21 @@
   margin: 30px auto;
 }
 
+@media screen and (min-width: 375px) {
+  .label {
+    font-size: 32px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .containerPlayer {
-    max-width: 480px;
+    max-width: 768px;
   }
 
   .label {
-    width: 360px;
-    max-width: 360px;
-    padding-left: 20px;
-    font-size: 32px;
+    width: 400px;
+    max-width: 400px;
+    padding-left: 0px;
+    font-size: 52px;
   }
 }
