@@ -19,7 +19,7 @@ const LastVideos = () => {
 
   return (
     <div className={css.videosContainer}>
-      <h2 className={css.title}>Los últimos videos de Youtube</h2>
+      <h2 className={css.title}>Los últimos videos en Youtube</h2>
       <div className={css.listVideo}>
         {isLoading ? (
           <div className={css.loaderContainer}>

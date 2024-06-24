@@ -55,7 +55,7 @@
   display: flex;
   align-items: center;
   column-gap: 8px;
-  color: rgb(161, 40, 40);
+  color: var(--white-color);
   font-size: 10px;
   font-weight: 600;
   animation: appearDown 1.4s ease;

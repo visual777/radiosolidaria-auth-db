@@ -23,36 +23,43 @@ const SolidariaTV = ({ canalVideo }) => {
   }, [canalVideo]);
 
   useEffect(() => {
-    if(!videosURL) return;
+    if (!videosURL) return;
     fetch(`/api/videos?category=${videosURL}`)
-      .then(response => response.json())
-      .then(data => setVideosYoutube(data.data));
+      .then((response) => response.json())
+      .then((data) => setVideosYoutube(data.data));
   }, [videosURL]);
 
   return (
     <div className={css.videosContainer}>
-      {videosURL && videosYoutube?.map((video) => (
-        <div key={video._id}>
-          <div>
-            <iframe
-              width="100%"
-              height="200"
-              src={video.url}
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowFullScreen
-              className={css.videoContainer}
-            ></iframe>
+      {videosURL &&
+        videosYoutube?.map((video) => (
+          <div key={video._id}>
+            <div>
+              <iframe
+                width="100%"
+                height="200"
+                src={video.url}
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+                className={css.videoContainer}
+              ></iframe>
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
       {canalVideo !== null && (
         <Link
           href={
             canalVideo === "Solidaria TV Kids"
               ? "https://www.youtube.com/@SolidariaKids/videos"
+              : canalVideo === "Solidaria TV"
+              ? "https://www.youtube.com/channel/UCbMKehIIFSlOs8vZ6MRt1RA"
+              : canalVideo === "Ramóon Ubillos"
+              ? "https://www.youtube.com/c/Ram%C3%B3nUbillos"
+              : canalVideo === "Miguel Díez"
+              ? "https://www.youtube.com/@PastorMiguelDiez"
               : "https://www.youtube.com/channel/UC7746OINwIay25Xz1ByfYZw"
           }
           target="_blank"
