@@ -1,4 +1,4 @@
-import React from "react";
+import { toast } from "react-toastify";
 import Icon from "@/components/Icon/Icon";
 import css from "./VideoItem.module.css";
 
@@ -11,13 +11,14 @@ const VideoItem = ({ video, refreshVideos }) => {
         method: "DELETE",
       });
       if (res.ok) {
-        console.log("Video deleted successfully");
         refreshVideos();
+        toast.success("El video se ha eliminado!");
       } else {
-        console.log("An error occurred while deleting the video");
+        toast.error("Error al eliminar el video");
       }
     } catch (error) {
-      console.log(error);
+      console.error(error);
+      toast.error("Error al eliminar el video");
     }
  };
 

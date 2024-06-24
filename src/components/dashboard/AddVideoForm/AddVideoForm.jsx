@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
+import { toast } from "react-toastify";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { addVideoSchema } from "@/app/models/schemaVideo";
 import CategorySelect from "../CategorySelect/CategorySelect";
@@ -29,9 +30,11 @@ const AddVideoForm = ({ setShowModal, refreshVideos }) => {
       if (response.ok) {
         setShowModal(false);
         refreshVideos();
+        toast.success("El video se ha añadido!");
       }
     } catch (error) {
       console.error(error);
+      toast.error("Error al añadir el video");
     } 
   };
 

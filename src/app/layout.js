@@ -2,10 +2,12 @@
 
 import { useState, useEffect } from "react";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import { ToastContainer } from 'react-toastify';
 import Header from "@/components/header/Header";
 import AuthProvider from "@/components/AuthProvider";
 import Footer from "@/components/footer/Footer";
 import FirstScreen from "@/components/FirstScreen/FirstScreen";
+import 'react-toastify/dist/ReactToastify.css';
 import "./globals.css";
 
 export default function RootLayout({ children }) {
@@ -32,6 +34,7 @@ export default function RootLayout({ children }) {
               <main>
                 {children}
                 <GoogleAnalytics gaId="G-S8PFRPB6DC" />
+                <ToastContainer />
               </main>
               <Footer />
             </>
