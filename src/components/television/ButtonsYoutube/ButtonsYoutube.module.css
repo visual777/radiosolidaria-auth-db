@@ -19,7 +19,7 @@
 }
 
 .linkBtn:last-of-type {
-  background-color: var(--white-color);
+  background-color: var(--dark-blue);
   border-radius: 20px;
 }
 
