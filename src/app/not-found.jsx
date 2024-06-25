@@ -7,8 +7,8 @@ const notFound = () => {
     <section className={css.section}>
       <div className={css.container}> 
        <h1>404</h1>
-       <h2>Not Found Page</h2>
-       <Link href={'/'} aria-label='Ir a Início página' className={css.link}>Ir a Início Page</Link>
+       <h2>Página no encontrada</h2>
+       <Link href={'/'} aria-label='Ir a Início página' className={css.link}>Ir a Início página</Link>
       </div>
     </section>
   )

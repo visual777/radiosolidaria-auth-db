@@ -48,12 +48,17 @@
 }
 
 @media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+
   .container h1 {
     font-size: 120px;
+    margin-top: 20%;
   }
 
   .container h2 {
-    font-size: 40px;
+    font-size: 50px;
   }
 
   .link {
@@ -65,6 +70,10 @@
 @media screen and (min-width: 1200px) {
   .container h1 {
     font-size: 150px;
+  }
+
+  .container h2 {
+    font-size: 60px;
   }
 
   .link:hover {
