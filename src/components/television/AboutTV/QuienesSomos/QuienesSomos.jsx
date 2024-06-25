@@ -11,7 +11,7 @@ const QuienesSomos = () => {
       <div className={css.content}>
         <div>
           <p>
-            <strong>RTV Solidaria</strong> es un medio de comunicación
+            <strong>Solidaria Media</strong> es un medio de comunicación
             comprometida con la sociedad con principios bíblicos y mas de 30
             años de trabajo. Contamos con canales de televisión abiertas en
             España, Argentina y Bolivia. Radios en distintas ciudades de España
@@ -22,7 +22,7 @@ const QuienesSomos = () => {
           <p>
             Queremos seguir siendo una <strong>herramienta positiva</strong>{" "}
             para la sociedad ofreciendo contenidos de valores y de ayuda
-            práctica para todo el público y para todas las edades. RTV También
+            práctica para todo el público y para todas las edades. <strong>Solidaria Media</strong> También
             colabora con distintas ONG por todo el mundo.
           </p>
           <p>

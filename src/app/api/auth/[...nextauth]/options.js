@@ -7,17 +7,17 @@ const emailAdmin = process.env.EMAIL_ADMIN;
 export const options = {
   providers: [
     CredentialsProvider({
-      name: "Credentials",
+      name: "Credenciales",
       credentials: {
         email: {
-          label: "Email: ",
+          label: "Correo electrónico: ",
           type: "email",
-          placeholder: "Enter your email",
+          placeholder: "Ingresa tu correo electrónico",
         },
         password: {
-          label: "Password: ",
+          label: "Contraseña: ",
           type: "password",
-          placeholder: "Enter password",
+          placeholder: "Ingresa tu contraseña",
         },
       },
       async authorize(credentials) {
