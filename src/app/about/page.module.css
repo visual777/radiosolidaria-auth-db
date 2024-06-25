@@ -9,7 +9,7 @@
   font-size: 20px;
   text-align: center;
   margin: 20px 0;
-  animation: appearLeft 1.4s ease;
+  animation: appear 1s ease;
 }
 
 @media screen and (min-width: 768px) {
@@ -28,14 +28,15 @@
   }
 }
 
-@keyframes appearLeft {
+@keyframes appear {
   0% {
       opacity: 0;
-      transform: translateX(200px);
+  }
+  75% {
+      opacity: 0;
   }
   100% {
       opacity: 1;
-      transform: translateX(0);
   }
   
 }

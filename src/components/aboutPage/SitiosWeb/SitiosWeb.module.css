@@ -8,6 +8,7 @@
   align-items: center;
   justify-content: center;
   column-gap: 8px;
+  animation: appear 1s ease;
 }
 
 .icon {
@@ -127,4 +128,17 @@
   .linkToWeb:hover .icon {
     fill: var(--white-color);
   }
+}
+
+@keyframes appear {
+  0% {
+      opacity: 0;
+  }
+  75% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+  
 }
