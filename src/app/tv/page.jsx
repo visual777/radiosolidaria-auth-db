@@ -20,6 +20,10 @@ export const metadata = {
     browseConfig: "/faviconTV/browserconfig.xml",
     siteManifest: "/faviconTV/site.webmanifest",
   },
+  links: [
+    {rel: 'preconnect', href: 'https://www.youtube.com'},
+    {rel: 'preconnect', href: 'https://www.google.com'},
+  ],
 };
 
 const page = () => {

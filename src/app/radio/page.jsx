@@ -21,6 +21,10 @@ export const metadata = {
       browseConfig: "/faviconRadio/browserconfig.xml",
       siteManifest: "/faviconRadio/site.webmanifest",
     },
+    links: [
+      {rel: 'preconnect', href: 'https://www.youtube.com'},
+      {rel: 'preconnect', href: 'https://www.google.com'},
+    ],
 };
 
 const page = () => {

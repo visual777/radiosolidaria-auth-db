@@ -29,7 +29,6 @@ const LastVideos = () => {
           <>
             {videosRadio?.map((video) => (
               <div key={video._id}>
-                <div>
                   <iframe
                     width="100%"
                     height="200"
@@ -41,7 +40,6 @@ const LastVideos = () => {
                     allowfullscreen
                     className={css.videoContainer}
                   ></iframe>
-                </div>
               </div>
             ))}
             <Link
