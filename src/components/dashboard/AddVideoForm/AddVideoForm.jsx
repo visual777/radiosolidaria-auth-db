@@ -27,6 +27,12 @@ const AddVideoForm = ({ setShowModal, refreshVideos }) => {
         },
         body: JSON.stringify(data),
       });
+      const responseData = await response.json();
+      if(responseData.status === 500) {
+        toast.error("El video ya existe con ese título o URL");
+        return;
+      };
+
       if (response.ok) {
         setShowModal(false);
         refreshVideos();

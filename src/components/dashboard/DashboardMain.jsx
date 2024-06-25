@@ -14,9 +14,7 @@ const DashboardMain = () => {
 
   useEffect(() => {
     if(!categoryChoosen) return;
-    fetch(`/api/dashboard?category=${categoryChoosen}`)
-      .then(response => response.json())
-      .then(data => setVideos(data.data));
+    refreshVideos();
   }, [categoryChoosen]);
 
   const refreshVideos = () => {
