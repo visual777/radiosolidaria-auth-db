@@ -4,18 +4,23 @@ import { redirect } from "next/navigation";
 import DashboardMain from "@/components/dashboard/DashboardMain";
 import css from "./page.module.css";
 
-const dashboard = async () => {
-    const session = await getServerSession(options);
+export const metadata = {
+  title: "Solidaria Media - tablero de control",
+  description: "Tablero de control de Solidaria Media y video de YouTube",
+};
 
-    if(!session) {
-      redirect('/api/auth/signin/?callbackUrl=/dashboard')
-    }
+const dashboard = async () => {
+  const session = await getServerSession(options);
+
+  if (!session) {
+    redirect("/api/auth/signin/?callbackUrl=/dashboard");
+  }
 
   return (
     <section className={css.section}>
       <DashboardMain />
     </section>
-  )
-}
+  );
+};
 
-export default dashboard
+export default dashboard;
