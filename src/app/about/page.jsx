@@ -4,9 +4,9 @@ import SitiosWeb from "@/components/aboutPage/SitiosWeb/SitiosWeb";
 import css from "./page.module.css";
 
 export const metadata = {
-  title: "Solidaria RTV - Nuestras afiliaciones, sitios web y redes sociales",
+  title: "Solidaria Media - Nuestras afiliaciones, sitios web y redes sociales",
   description:
-    "Solidaria RTV es una radio y televisión cristiana en línea que transmite música, programas y mensajes cristianos las 24 horas del día.",
+    "Solidaria Media es una radio y televisión cristiana en línea que transmite música, programas y mensajes cristianos las 24 horas del día.",
   icons: {
     icon: "/favicon.ico",
     appleIcon: "/apple-touch-icon.png",
