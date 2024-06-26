@@ -7,7 +7,9 @@
   border-radius: 12px;
   padding: 15px;
   display: flex;
+  flex-direction: column;
   align-items: center;
+  row-gap: 16px;
   justify-content: center;
   background: radial-gradient(
     circle,
@@ -22,10 +24,17 @@
 .text {
   text-align: center;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 300;
   color: var(--white-color);
   text-shadow: 3px 3px 5px rgba(64, 169, 148, 1);
   animation: scaling 2s linear 1;
+}
+
+.icon {
+  width: 42px;
+  height: 42px;
+  fill: rgb(190, 190, 190);
+  animation: scalingIcon 4s linear infinite;
 }
 
 @media screen and (min-width: 375px) {
@@ -35,14 +44,32 @@
 }
 
 @media screen and (min-width: 768px) {
+  .overlay {
+    row-gap: 26px;
+  }
+
   .text {
     font-size: 28px;
+  }
+
+  .icon {
+    width: 62px;
+    height: 62px;
   }
 }
 
 @media screen and (min-width: 1200px) {
+  .overlay {
+    row-gap: 36px;
+  }
+
   .text {
     font-size: 38px;
+  }
+
+  .icon {
+    width: 82px;
+    height: 82px;
   }
 }
 
@@ -58,8 +85,28 @@
 @keyframes scaling {
   0% {
     transform: scale(0);
+    color: var(--dark-blue);
   }
 
+  100% {
+    transform: scale(1);
+    color: var(--white-color);
+  }
+}
+
+@keyframes scalingIcon {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.2);
+  }
+  25% {
+    transform: scale(1.4);
+  }
+  25% {
+    transform: scale(1.2);
+  }
   100% {
     transform: scale(1);
   }
