@@ -1,20 +1,24 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { useMediaQuery } from "react-responsive";
-import Icon from "@/components/Icon/Icon";
-import Hls from "hls.js";
-import css from "./VideoButtons.module.css";
 import Image from "next/image";
+import Hls from "hls.js";
+import { useMediaQuery } from "react-responsive";
+import Overlay from "../Overlay/Overlay";
+import Icon from "@/components/Icon/Icon";
+import css from "./VideoButtons.module.css";
 
 const VideoButtons = () => {
-  const isTabletEnd = useMediaQuery({maxWidth: 1199.98});
+  const isTabletEnd = useMediaQuery({ maxWidth: 1199.98 });
   const videoRef = useRef(null);
   const SpainTV =
     "https://canadaremar2.todostreaming.es/live/solidariatv-webhd.m3u8";
   const ArgentinaTV =
     "https://canadaremar2.todostreaming.es/live/argentina-web.m3u8";
   const [urlTv, setUrlTv] = useState("");
+  const [showOverlay, setShowOverlay] = useState(false);
+
+  const handleClickOverlay = () => setShowOverlay(true);
 
   useEffect(() => {
     const hls = new Hls();
@@ -40,6 +44,7 @@ const VideoButtons = () => {
       setUrlTv(SpainTV);
     } else {
       setUrlTv("");
+      setShowOverlay(false);
     }
   };
 
@@ -48,6 +53,7 @@ const VideoButtons = () => {
       setUrlTv(ArgentinaTV);
     } else {
       setUrlTv("");
+      setShowOverlay(false);
     }
   };
 
@@ -61,10 +67,18 @@ const VideoButtons = () => {
           onClick={handleSpainTV}
         >
           España&nbsp;
-            {urlTv !== "" && urlTv !== ArgentinaTV && isTabletEnd ? 'TV' : (<Icon
-            name={urlTv !== "" && urlTv !== ArgentinaTV  ? "icon-stop" : "icon-play"}
-            className={css.playIcon}
-          />)}
+          {urlTv !== "" && urlTv !== ArgentinaTV && isTabletEnd ? (
+            "TV"
+          ) : (
+            <Icon
+              name={
+                urlTv !== "" && urlTv !== ArgentinaTV
+                  ? "icon-stop"
+                  : "icon-play"
+              }
+              className={css.playIcon}
+            />
+          )}
         </button>
         <button
           type="button"
@@ -73,10 +87,16 @@ const VideoButtons = () => {
           onClick={handleArgentinaTV}
         >
           Argentina{" "}
-          {urlTv !== "" && urlTv !== SpainTV && isTabletEnd ? 'TV' : (<Icon
-            name={urlTv !== "" && urlTv !== SpainTV  ? "icon-stop" : "icon-play"}
-            className={css.playIcon}
-          />)}
+          {urlTv !== "" && urlTv !== SpainTV && isTabletEnd ? (
+            "TV"
+          ) : (
+            <Icon
+              name={
+                urlTv !== "" && urlTv !== SpainTV ? "icon-stop" : "icon-play"
+              }
+              className={css.playIcon}
+            />
+          )}
         </button>
       </div>
       <div className={css.videoContainer}>
@@ -84,13 +104,17 @@ const VideoButtons = () => {
           Your browser does not support the video tag.
         </video>
         {urlTv === "" && (
-          <Image
-            src={"/images/solidariaTV/wrapperTV.webp"}
-            alt="Seleccione España o Argentina para ver"
-            layout="fill"
-            objectFit="cover"
-            className={css.wrapperVideo}
-          />
+          <>
+            <Image
+              src={"/images/solidariaTV/wrapperTV.webp"}
+              alt="Seleccione España o Argentina para ver"
+              layout="fill"
+              objectFit="cover"
+              className={css.wrapperVideo}
+              onClick={handleClickOverlay}
+            />
+            {showOverlay && <Overlay />}
+          </>
         )}
       </div>
     </div>
