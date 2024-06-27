@@ -11,7 +11,7 @@ export const buttons = [
     },
     {
         id: '3',
-        name: 'Ramóon Ubillos',
+        name: 'Ramón Ubillos',
         img: '/images/youtubeButtons/ramon.webp'
     },
     {

@@ -6,7 +6,7 @@ const QuienesSomos = () => {
   return (
     <div className={css.container}>
       <h3>
-       ¿ Quienes Somos ?
+       ¿Quiénes Somos?
       </h3>
       <div className={css.content}>
         <div>

@@ -1,7 +1,7 @@
 export const cardsInfo = [
   {
     id: "1",
-    title: "¿Quienes somos?",
+    title: "¿Quiénes somos?",
     image: "/images/solidariaTV/info-solidariaTV.webp"
   },
   {
