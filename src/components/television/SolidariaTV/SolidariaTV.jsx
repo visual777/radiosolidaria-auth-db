@@ -15,7 +15,7 @@ const SolidariaTV = ({ canalVideo }) => {
       setVideoURL("kids");
     } else if (canalVideo === "Miguel Díez") {
       setVideoURL("miguel");
-    } else if (canalVideo === "Ramóon Ubillos") {
+    } else if (canalVideo === "Ramón Ubillos") {
       setVideoURL("ramon");
     } else {
       setVideoURL(null);
@@ -57,7 +57,7 @@ const SolidariaTV = ({ canalVideo }) => {
               ? "https://www.youtube.com/@SolidariaKids/videos"
               : canalVideo === "Solidaria TV"
               ? "https://www.youtube.com/channel/UCbMKehIIFSlOs8vZ6MRt1RA"
-              : canalVideo === "Ramóon Ubillos"
+              : canalVideo === "Ramón Ubillos"
               ? "https://www.youtube.com/c/Ram%C3%B3nUbillos"
               : canalVideo === "Miguel Díez"
               ? "https://www.youtube.com/@PastorMiguelDiez"

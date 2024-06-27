@@ -28,7 +28,7 @@ const AboutTV = () => {
           </li>
         ))}
       </ul>
-      {contentName === "¿Quienes somos?" ? (
+      {contentName === "¿Quiénes somos?" ? (
         <QuienesSomos />
       ) : contentName === "Frecuencias TV Argentina" ? (
         <Frequencias />
