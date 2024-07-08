@@ -34,7 +34,7 @@ const page = () => {
       <div className={css.container}>
         <div className={css.heroContainer}>
           <DesktopImg />
-          <AudioRadio url="https://canadaremar2.todostreaming.es/live/solidariatv-radio.m3u8" />
+          <AudioRadio url="https://todostreaming.eu/player/audio.html" />
         </div>
         <div className={css.contentContainer}>
           <LastVideos />
