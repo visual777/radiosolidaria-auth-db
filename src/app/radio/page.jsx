@@ -19,7 +19,7 @@ export const metadata = {
       androidIcon512: "/faviconRadio/android-chrome-512x512.png",
       safariPinnedTab: "/faviconRadio/safari-pinned-tab.svg",
       browseConfig: "/faviconRadio/browserconfig.xml",
-      siteManifest: "/faviconRadio/site.webmanifest",
+       siteManifest: "/faviconRadio/site.webmanifest",
     },
     links: [
       {rel: 'preconnect', href: 'https://www.youtube.com'},
@@ -34,7 +34,7 @@ const page = () => {
       <div className={css.container}>
         <div className={css.heroContainer}>
           <DesktopImg />
-          <AudioRadio url="https://todostreaming.eu/player/audio.html" />
+          <AudioRadio url=""/>
         </div>
         <div className={css.contentContainer}>
           <LastVideos />
