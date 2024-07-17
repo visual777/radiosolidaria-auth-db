@@ -34,7 +34,7 @@ const page = () => {
       <div className={css.container}>
         <div className={css.heroContainer}>
           <DesktopImg />
-          <AudioRadio url="https://master.shoutcast.com:8000/radiosolidaria"/>
+          <AudioRadio url="https://streaming.shoutcast.com/radiosolidaria"/>
         </div>
         <div className={css.contentContainer}>
           <LastVideos />
