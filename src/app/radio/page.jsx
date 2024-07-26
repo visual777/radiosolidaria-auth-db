@@ -34,7 +34,7 @@ const page = () => {
       <div className={css.container}>
         <div className={css.heroContainer}>
           <DesktopImg />
-          <AudioRadio url="http://rkmradio.com:8000/stream/1/"/>
+          <AudioRadio url="https://rkmradio.com:7443/stream/1/"/>
         </div>
         <div className={css.contentContainer}>
           <LastVideos />
