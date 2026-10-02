@@ -14,7 +14,7 @@ const VideoButtons = () => {
   const SpainTV =
     "https://stream.visual777.com/hls/out_2000/index.m3u8";
   const ArgentinaTV =
-    "https://stream.visual777.com/hls/out_3071.index.m3u8";
+    "https://stream.visual777.com/hls/out_3071/index.m3u8";
   const [urlTv, setUrlTv] = useState("");
   const [showOverlay, setShowOverlay] = useState(false);
 
