@@ -12,9 +12,9 @@ const VideoButtons = () => {
   const isTabletEnd = useMediaQuery({ maxWidth: 1199.98 });
   const videoRef = useRef(null);
   const SpainTV =
-    "https://canadaremar2.todostreaming.es/live/solidariatv-webhd.m3u8";
+    "https://stream.visual777.com/hls/out_2000/index.m3u8";
   const ArgentinaTV =
-    "https://canadaremar2.todostreaming.es/live/argentina-web.m3u8";
+    "https://stream.visual777.com/hls/out_3071.m3u8";
   const [urlTv, setUrlTv] = useState("");
   const [showOverlay, setShowOverlay] = useState(false);
 
