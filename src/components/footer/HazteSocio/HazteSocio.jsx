@@ -5,7 +5,7 @@ const HazteSocio = () => {
   return (
     <div>
       <Link
-        href={"https://www.solidariatv.com/hazte-socio/"}
+        href={"https://www.solidariatv.com/ofrenda/"}
         target="_blank"
         aria-label="Ir a sitio web de Solidaria TV Hazte Socio"
         className={css.link}
